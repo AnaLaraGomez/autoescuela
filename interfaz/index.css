@@ -1,0 +1,243 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:2px solid rgb(223, 129, 42);
+}
+
+.principal{
+    height: calc(100vh - 6em);
+    margin: 0px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.menu ul li {
+    /*QUitar las bolicas de los li en los ul */
+    list-style-type: none;
+
+     /* Como no es de tipo button
+    se pierde el cursor en forma de mano 
+    asi que hay que ponerlo */
+    cursor: pointer;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.75em;
+
+    background-position: top;
+    height: 32px;
+    
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 32px;
+    background-size: 32px 32px;
+}
+
+.menu ul li:hover {
+    font-weight: bold;
+    color: rgb(223, 129, 42);;
+}
+
+.examen {
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/examen.png');
+}
+
+.examen:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/examen-seleccionado.png');
+}
+
+.generarExamen {
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/generar.png');
+}
+
+.generarExamen:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/generar-seleccionado.png');
+}
+
+.examenesPendientes {
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/pendientes.png');
+}
+
+.examenesPendientes:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/pendientes-seleccionado.png');
+}
+
+.examenesAnteriores {
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/anteriores.png');
+}
+
+.examenesAnteriores:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/anteriores-seleccionado.png');
+}
+
+.pregunta{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/pregunta.png');
+
+}
+.pregunta:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/pregunta-seleccionada.png');
+
+}
+.gestion{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/gestion.png');
+
+}
+.gestion:hover{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/gestion-seleccionado.png');
+
+}
+
+.contenido-iframe{
+    width: 100%; 
+    height: 90%
+}
+#iframe{
+    width:100%;
+    height: 100%;
+    border: unset; 
+}
+
+#logo{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/logo.png');
+    background-repeat: no-repeat;
+    border: none;
+    background-size: 170px 72px;
+    height: 72px;
+    width: 170px;
+    margin-left: 0.5em;
+}
+
+.informacion-usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+#nombre {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;    
+}
+
+#rol {
+    color:#3e3e3e;
+    font-size: smaller;
+    margin: 0;    
+}
+
+#foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+   /* border: 2px solid  rgb(223, 129, 42); */
+}
+
+.pie{
+    background-color: rgba(103, 166, 179,0.2);
+    width: 100%;
+    height: 10%;
+    border-top: 2px solid rgb(223, 129, 42);
+}
+
+.pie address {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em;
+}
+
+.coche {
+    left:-200px;
+    width: 32px;
+    height: 32px;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/car-side-right.png');
+    background-size: 32px 32px;
+    position: absolute;
+    bottom: 10%; /*Tamaño del pie*/
+    animation-name: coche-movimiento;
+    animation-duration: 6s;
+}
+
+.señal {
+    left: 53%;
+    bottom:-48px;
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+    animation-name: señal-movimiento;
+    animation-duration: 6s;
+
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/stop-sign.png');
+    background-size: 48px 48px;
+}
+
+@keyframes coche-movimiento {
+    0%   {left:-32px;}
+    50%   {left:50%;}
+    65%   {left:50%;}
+    100% {left:100%;}
+}
+
+@keyframes señal-movimiento {
+    0%   {bottom:-48px;}
+    40%   {bottom:10%;}
+    55%   {bottom:10%;}
+    100% {bottom:-48px;}
+}
+
+.contenido-datos-direccion{
+   display: flex;
+   align-items: center;
+   gap: 0.75em;
+}
+
+.contenido-datos-contacto{
+    padding: 0.75em;
+}
+
+#emailContacto{
+    font-size: small;
+    color: #3e3e3e;
+}
+#telefonoContacto{
+    font-size: small;
+    color: #3e3e3e;
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociales a{
+    margin-left: 0.5em;
+}
+.redes-sociales .iconos {
+    display: flex;
+}
+
+.redes-sociales a div {
+    background-size: 1.5em 1.5em;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#facebook{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/facebookIcon.png');
+}
+
+#instagram{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/instagramLogo.jpg');
+}
+
+#twitter{
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/twitterIcon.png');
+}

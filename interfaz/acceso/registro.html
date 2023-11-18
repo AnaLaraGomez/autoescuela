@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/acceso/acceso.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/acceso/acceso.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+    <form class= "registro" id="registro" >  
+        <div id="mensajeExito"></div>
+        
+        <div id="grupoUsuario">
+            <label>Usuario</label>
+            <input 
+                type="text" 
+                id="usuario"
+                name="usuario"
+                >
+        </div>
+        <div id="grupoPassword">
+            <label>Password</label>
+            <input
+                type="password" 
+                id="password"
+                name="password"
+                >
+        </div>
+        <div id="grupoPassword2">
+            <label>Repite password</label>
+            <input
+                type="password" 
+                id="password2"
+                name="password2"
+                >
+        </div>
+        <div id="grupoRol" class="grupo-radios">
+            <div class="opcionRol">
+                <label>Admin</label>
+                <input type="radio" value="admin" name="rol" />
+            </div>
+            <div class="opcionRol">
+                <label>Profesor</label>
+                <input type="radio" value="profesor" name="rol"/>
+            </div>
+            <div class="opcionRol">
+                <label>Alumno</label>
+                <input type="radio" value="alumno" name="rol" checked/>
+            </div>
+        </div>
+
+        <div class="boton">
+            <button class="boton-primario" type="button" onclick="registrar()">Registro</button>
+        </div>      
+    </form>
+    <div>
+        <p class="descripcion">Si tienes ya una cuenta, entra <a href="http://autoescuelaprisas.com/autoescuela/interfaz/acceso/login.html">aquí</a></p>
+    </div>
+</body>
+</html>

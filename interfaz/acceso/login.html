@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/acceso/acceso.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/acceso/acceso.js"></script>
+    <title>Log In</title>
+</head>
+<body>
+    <form id="login" >  
+        <div id="grupoUsuario">
+            <label>Usuario</label>
+            <input 
+                type="text" 
+                id="usuario"
+                name="usuario"
+                >
+        </div>
+        <div id="grupoPassword">
+            <label>Password</label>
+            <input
+                type="password" 
+                id="password"
+                name="password"
+                >
+                <button type="button" id="ojo"></button>
+        </div>
+        <div class="boton">
+            <button class="boton-primario" type="button" onclick="login()">Acceder</button>
+        </div>      
+    </form>
+    <div>
+        <p class="descripcion">Si no tienes una cuenta, registrate <a href="http://autoescuelaprisas.com/autoescuela/interfaz/acceso/registro.html">aquí</a></p>
+    </div>
+</body>
+</html>

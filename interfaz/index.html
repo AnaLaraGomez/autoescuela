@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/index.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+    
+    <title>Autoescuela Prisas</title>
+</head>
+<body class="principal">
+
+    <div id="header" class="header">
+        <div id="logo">
+            <!-- logo autoescuela, no depende del usuario-->
+        </div>
+
+        <nav class="menu">
+            <ul id="botones">
+                <!-- Botones que puede acceder el usuario en funcion de su rol -->
+            </ul>
+        </nav>
+
+        <div class="informacion-usuario">
+            <!-- Nombre y foto del usuario-->
+            <div>
+                <p id="nombre"></p>
+                <p id="rol"></p>
+            </div>
+            <div id="foto">
+
+            </div>
+            <button class="boton-primario" id="logout">Logout</button>
+        </div>
+        
+    </div>
+    
+    <div id="contenido" class="contenido-iframe">
+        <iframe id="iframe"></iframe>
+    </div>
+
+    <footer class="pie descripcion">
+        <address>        
+            <div class="contenido-datos-contacto">
+                <a id="telefonoContacto" href="tel:+34680000000">¡Llámanos! 680000000</a><br>
+                <a id="emailContacto" href="mailto:laragomezana@gmail.com" title="Envio de email">¡Escríbenos a laragomezana@gmail.com!</a>
+            </div>
+            <div class="redes-sociales">
+                <p>¡Siguenos en nuestras Redes Sociales!</p>
+                <div class="iconos">
+                    <a target="_blank" href="https://www.facebook.com/?locale=es_ES"><div id="facebook"></div></a>
+                    <a target="_blank" href="https://www.instagram.com/"><div id="instagram"></div></a>
+                    <a target="_blank" href="https://twitter.com/?lang=es"><div id="twitter"></div></a>
+                </div>
+            </div>
+
+            <div class="contenido-datos-direccion">
+                <p>
+                    Donde nos encontramos: <br>
+                    Av. Arjona, 5, 23006 Jaén
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3153.3804533549774!2d-3.8043834!3d37.7811228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd71774e45867%3A0x99df1e0032930534!2sIES%20Las%20Fuentezuelas!5e0!3m2!1ses!2ses!4v1699346133864!5m2!1ses!2ses" width="350" height="48" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </address>
+    </footer>
+    <div id="coche"></div>
+    <div id="señal"></div>
+
+</body>
+</html>

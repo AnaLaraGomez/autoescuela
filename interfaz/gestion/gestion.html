@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/comun.js"></script>
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/gestion/gestion.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/gestion/gestion.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+
+    <title>Gestión</title>
+</head>
+<body>
+    <div class="alta-usuario-contenedor">
+        <button id="crearUsuario" class="boton-primario">Dar alta Usuario</button>
+    </div>
+    <div class="tablas">
+       
+        <div class="grupoTablas">
+            <h2 class="titulo">Usuarios Actuales</h2>
+            <p class="descripcion">Aquí estan listados los usuarios que pertenecen al sistema. Puedes alterar el rol y hacer click en 'Guardar' para cambiar el acceso a los usuarios. Puedes, también, eliminar usuarios.</p>
+            <table id="usuariosActuales">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Role</th>
+                    <th>Acciones</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grupoTablas">
+            <h2>Usuarios Pendientes</h2>
+            <table id="usuariosPendientes">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Role</th>
+                    <th>Acciones</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="altaUsuarioModal" class="modal">
+        <div class="modal-contenido">
+            <p class="titulo">Alta Usuario</p>
+            <form id="altaUsuario" name="altaUsuario" >  
+                <div id="mensajeExito"></div>
+                
+                <div id="grupoUsuario">
+                    <label>Usuario</label>
+                    <input 
+                        type="text" 
+                        id="usuario"
+                        name="usuario"
+                        >
+                </div>
+                <div id="grupoPassword">
+                    <label>Password</label>
+                    <input
+                        type="password" 
+                        id="password"
+                        name="password"
+                        >
+                </div>
+                <div id="grupoRol" class="grupo-radios">
+                    <div class="opcionRol">
+                        <label>Admin</label>
+                        <input type="radio" value="admin" name="rol" />
+                    </div>
+                    <div class="opcionRol">
+                        <label>Profesor</label>
+                        <input type="radio" value="profesor" name="rol"/>
+                    </div>
+                    <div class="opcionRol">
+                        <label>Alumno</label>
+                        <input type="radio" value="alumno" name="rol" checked/>
+                    </div>
+                </div> 
+                <button type="button" id="btnCancelarModal" class="boton-secundario">Cancelar</button>
+                <button type="button" id="btnAltaUsuarioModal" class="boton-primario" >Dar de Alta</button>    
+            </form>
+        </div>
+    </div>
+    <div class="toast-exito" id="toastExito"></div>
+</body>
+</html>

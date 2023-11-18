@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/examen/ponteaprueba.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/examen/examen.css">
+    <title>Ponte A Prueba</title>
+</head>
+<body>
+    <div class="ponte-a-prueba">
+        <div id ="filtros"  class="filtros">
+            <div class="filtro">
+                <label>Dificultad</label>
+                <select class="selector">
+                    <option value="1">Normal</option>
+                    <option value="2">Intermedia</option>
+                    <option value="3">Difícil</option>
+                </select>
+            </div>
+            <button type="button" id="comenzarExamenBtn">Comenzar Examen</button>
+        </div>
+
+        <div id="examen">
+            <nav id="navegadorExamen" class="navegador-examen">
+                <div><button id="enviarExamen" class="boton-primario">Enviar Examen</button></div>
+            </nav>
+            <div id="preguntas"></div>
+            <div id="controles">
+                <button class="prev-btn">Anterior</button>
+                <button class="next-btn">Siguiente</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="toast-exito" id="toastExito"></div>
+    <div class="toast-error" id="toastError"></div>
+
+</body>
+</html>

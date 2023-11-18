@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/comun.js"></script>
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/preguntas/preguntas.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/preguntas/preguntas.css">
+    <title>Preguntas</title>
+</head>
+<body >
+    <h1>PREGUNTAS</h1>
+    <div class="preguntas">
+        <div class="filtros">
+
+            <div class="filtro">
+                <label>Dificultad</label>
+                <select id="filtroDificultad" class="selector">
+                    <option value="1">Normal</option>
+                    <option value="2">Intermedia</option>
+                    <option value="3">Difícil</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label>Categoria</label>
+                <select id="filtroCategoria" name="categoria" class="selector categorias"></select>
+            </div>
+
+            <div>
+                <button id="buscarPreguntasBtn" class="boton-secundario">Buscar</button>
+            </div>
+
+        </div>
+        <div class="crea-pregunta-contenedor">
+            <button id="btnCrearPregunta" class="boton-primario">Crear Pregunta</button>
+        </div>
+
+        <div class="bateria-preguntas" id="bateriaPreguntas">
+             <!-- Las preguntas se añaden con la informacion que llega del servidor -->
+        </div>
+    </div>
+
+    <div id="modalCrearPregunta" class="modal">
+        <div class="modal-contenido">
+            <p class="titulo">Crear pregunta</p>
+            <div id="mensajeExito"></div>
+            <form id="crearPregunta">
+
+                    <div class="conjunto-select">
+                        <label>Dificultad</label>
+                        <select name="dificultad" class="selector">
+                            <option value="1">Normal</option>
+                            <option value="2">Intermedia</option>
+                            <option value="3">Difícil</option>
+                        </select>
+                    </div>
+        
+                    <div class="conjunto-categoria">
+                        <div class="conjunto-select">
+                            <label>Categoria</label>
+                            <select name="categoria" class="selector categorias"></select>
+                        </div>
+
+                        <div id="crearCategoriaFormulario" class="conjunto-select">
+                            <label>Crear Categoria</label>
+                            <div>
+                                <input type="text" id="crearCategoria" name="crearCategoria" />
+                                <button id="crearCategoriaBtn" type="button">Crear</button>
+                            </div>
+                        </div>
+
+                    </div>
+        
+                
+                
+                <div class="conjunto-select" id="grupoEnunciado">
+                    <label>Enunciado</label>
+                    <textarea 
+                        type="text" 
+                        id="enunciado"
+                        name="enunciado"
+                        cols="64"
+                        rows="3"
+                        >
+                    </textarea>
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta1">
+                    <label>Respuesta A</label>
+                    <input 
+                        type="text" 
+                        id="respuesta1"
+                        name="respuesta1"
+                        >
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta2">
+                    <label>Respuesta B</label>
+                    <input 
+                        type="text" 
+                        id="respuesta2"
+                        name="respuesta2"
+                        >
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta3">
+                    <label>Respuesta C</label>
+                    <input 
+                        type="text" 
+                        id="respuesta3"
+                        name="respuesta3"
+                        >
+                </div>
+                <div class="conjunto-radios" >
+                    <label>Correcta</label><br>
+                    <div class="grupo-radios" id="grupoRespuestaCorrecta">
+                        <div class="opcionRespuesta">
+                            <label>A</label>
+                            <input type="radio" value="1" name="correcta" checked/>
+                        </div>
+                        <div class="opcionRespuesta">
+                            <label>B</label>
+                            <input type="radio" value="2" name="correcta"/>
+                        </div>
+                        <div class="opcionRespuesta">
+                            <label>C</label>
+                            <input type="radio" value="3" name="correcta" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <input type="file" name="archivo"/>
+                </div>
+                
+                
+                <button type="button" id="btnCancelarModal" class="boton-secundario">Cancelar</button>
+                <button type="button" id="btnGuardarModal" class="boton-primario" >Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalEditarPregunta"  class="modal">
+        <div class="modal-contenido">
+            <p class="titulo">Editar pregunta</p>
+            <div id="mensajeExitoEditar"></div>
+            <form id="editarPregunta" name="modalEditarPregunta">        
+                <div class="conjunto-select" id="grupoEnunciadoEditar">
+                    <label>Enunciado</label>
+                    <textarea 
+                        type="text"
+                        name="enunciado"
+                        cols="64"
+                        rows="3"
+                        >
+                    </textarea>
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta1Editar">
+                    <label>Respuesta A</label>
+                    <input 
+                        type="text" 
+                        name="respuesta1"
+                        >
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta2Editar">
+                    <label>Respuesta B</label>
+                    <input 
+                        type="text" 
+                        name="respuesta2"
+                        >
+                </div>
+
+                <div class="conjunto-select" id="grupoRespuesta3Editar">
+                    <label>Respuesta C</label>
+                    <input 
+                        type="text" 
+                        name="respuesta3"
+                        >
+                </div>
+                <div class="conjunto-radios" >
+                    <label>Correcta</label><br>
+                    <div class="grupo-radios" id="grupoRespuestaCorrectaEditar">
+                        <div class="opcionRespuesta">
+                            <label>A</label>
+                            <input type="radio" value="1" name="correcta" checked/>
+                        </div>
+                        <div class="opcionRespuesta">
+                            <label>B</label>
+                            <input type="radio" value="2" name="correcta"/>
+                        </div>
+                        <div class="opcionRespuesta">
+                            <label>C</label>
+                            <input type="radio" value="3" name="correcta" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multimedia" >
+                    <img name="urlImg" />
+                    <video id="urlVideo" ></video>
+                </div>
+                
+
+                <div class="">
+                    <input type="file" name="archivo"/>
+                </div>
+                <input 
+                    type="text" 
+                    name="preguntaId"
+                    hidden
+                    >
+                <input 
+                    type="text" 
+                    name="url"
+                    hidden
+                    >
+                <input 
+                    type="text" 
+                    name="tipoUrl"
+                    hidden
+                    >          
+                <button type="button" id="btnCancelarModalEditar" class="boton-secundario">Cancelar</button>
+                <button type="button" id="btnGuardarModalEditar" class="boton-primario" >Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-error" id="toastError"></div>
+</body>
+</html>

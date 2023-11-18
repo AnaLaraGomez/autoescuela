@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/examen/generarexamen.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/examen/examen.css">
+    <title>Generar Examen</title>
+</head>
+<body>
+    <h1>Generar Examen</h1>
+    <div class="modo">
+        <h2 class="titulo">Modo</h2>
+        <p class="descripcion">Elija la opción de generación de examen y su dificultad</p>
+        <div id ="filtros"  class="filtros">
+            <div class="filtro">
+                <label>Dificultad</label>
+                <select id ="dificultad"  class="selector">
+                    <option value="1">Normal</option>
+                    <option value="2">Intermedia</option>
+                    <option value="3">Difícil</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label>Examinados</label>
+                <select id ="alumnosModo" class="selector">
+                    <option value="todos">Todos los alumnos</option>
+                    <option value="manual">Selección manual</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label>Selección de preguntas</label>
+                <select id ="preguntasModo" class="selector">
+                    <option value="aleatorio">Selección aleatoria</option>
+                    <option value="manual">Selección manual</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="alumnos">
+        <h2 class="titulo">Alumnos</h2>
+        <p class="descripcion">Selecciona los alumnos que quieres que se examinen con este examen </p>
+        <div class="selector">
+            <label>Alumno: </label>
+            <input id="alumnoSeleccionado" list="selectorAlumnos" />
+            <datalist id="selectorAlumnos"></datalist>
+            <button id="añadirAlumno">Añadir</button>
+        </div>
+        <ul id="alumnosSeleccionados" class="usuarios-seleccionados">
+            
+        </ul>
+    </div>
+
+    <div id="preguntas">
+        <h2 class="titulo">Preguntas</h2>
+        <p class="descripcion">Selecciona las preguntas que quieres que se añadan al examen</p>
+
+        <div class="filtro">
+            <label>Categoria</label>
+            <select id="filtroCategoria"  class="selector categorias"></select>
+        </div>
+
+        <div class="tablas">
+            <div class="grupoTablas">
+                <h2 class="descripcion">Preguntas disponibles</h2>
+                <table id="preguntasDisponibles">
+                    <tr>
+                        <th>Enunciado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="grupoTablas">
+                <h2 class="descripcion">Preguntas seleccionadas</h2>
+                <table id="preguntasSeleccionadas">
+                    <tr>
+                        <th>Enunciado</th>
+                        <th>Categoria</th>
+                        <th>Acciones</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="botones">
+        <button id="crearExamenBtn" class="boton-primario">Crear Examen</button>
+    </div>
+    <div class="toast-exito" id="toastExito"></div>
+    <div class="toast-error" id="toastError"></div>
+</body>
+</html>

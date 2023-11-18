@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/logo.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 2em;
+    background-size: 25em 8em;
+    background-color: rgba(103, 166, 179,0.1);
+}
+
+form {
+    background-color: white;
+    border: 2px solid rgb(223, 129, 42);;
+    padding: 1.75em;
+    width: 33%;
+    border-radius: 0.5em;
+ }
+
+ form div {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+ }
+
+ form div label {
+    font-size: medium;
+    font-weight: bold;
+ }
+
+ form div input {
+    width: 93%;
+ }
+
+ form .boton button {
+    margin-top: 1em;
+    width: 100%;
+ }
+ .grupo-radios {
+    flex-direction: row;
+ }
+ .grupo-radios .opcionRol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ #grupoPassword{
+   position: relative;
+
+ }
+ #ojo{
+   position: absolute;
+   right: 0.75em;
+   bottom: 0.75em;
+   border: none;
+   padding: 0;
+   background-size: 1.5em 1.5em;
+   height: 1.5em;
+   width: 1.5em;
+   background-color: unset;
+   background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/sin-ver.png');
+}

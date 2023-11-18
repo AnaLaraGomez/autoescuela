@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://autoescuelaprisas.com/autoescuela/cliente/examen/anteriores.js"></script>
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/comun.css">
+    <link rel="stylesheet" href="http://autoescuelaprisas.com/autoescuela/interfaz/examen/examen.css">
+    <title>Exámenes Anteriores</title>
+</head>
+<body>
+    <div class="tablas">
+        <div class="grupoTablas">
+            <h2 class="titulo">Exámenes Anteriores</h2>
+            <p class="descripcion">Aquí estan listados los exámenes realizados con su nota. Si lo deseas, puedes realizarlos de nuevo</p>
+            <table id="examenesAnteriores">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Creador</th>
+                    <th>Nota</th>
+                    <th>Acciones</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="examenesAnterioresPorAlumnoContenedor" class="grupoTablas">
+            <h2 class="titulo">Exámenes Anteriores de alumno</h2>
+            <p class="descripcion">Elige un alumno para cargar sus examenes Anteriores</p>
+            
+            <p>Ver exámenes Anteriores de 
+                <select id="selectorAlumnos" class="selector"></select>
+                <button id="verExamenesAlumnoBtn">Ver</button>
+            </p>
+            <table id="examenesAnterioresPorAlumno">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Creador</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

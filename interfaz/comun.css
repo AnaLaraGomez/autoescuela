@@ -1,0 +1,231 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 10pt;
+}
+
+input, textarea, select, datalist {
+    padding: 0.75em;
+    border: 1px solid rgba(103, 166, 179,0.2);
+    border-radius: 0.5em;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: small;
+}
+
+.exito {
+   color: green;
+   font-weight: bold;
+   margin-top: 4px;
+   font-size: large;
+}
+
+.grupo-radios {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+ }
+
+.edit-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/edit.png');
+    background-position: center;
+    height: 24px;
+    
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 28px;
+    background-size: 24px 24px;
+    color: #DF812A;
+}
+.delete-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/delete.png');
+    background-position: top;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 28px;
+    background-size: 24px 24px;
+    color: #CE0025;
+}
+
+.denied-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/denegar.png');
+    background-position: top;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 28px;
+    background-size: 24px 24px;
+}
+
+.accept-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/permitir.png');
+    background-position: top;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 28px;
+    background-size: 24px 24px;
+}
+
+.boton-primario {
+    cursor: pointer;
+    background-color: rgba(103, 166, 179,0.2);
+    border: 2px solid rgba(103, 166, 179,0.2);
+    border-radius: 0.5em;
+    color: black;
+    padding: 0.75em;
+}
+
+.boton-secundario {
+    cursor: pointer;
+    border: 2px solid rgb(223, 129, 42);
+    background-color: white;
+    border-radius: 0.5em;
+    color: black;
+    padding: 0.75em;
+}
+
+.filtros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filtros .filtro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0.5em;
+
+    border-radius: 0.5em;
+}
+
+.filtros .filtro label {
+    position: absolute;
+    top: -0.5em;
+    background-color: white;
+}
+
+
+.modal {
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-contenido {
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 75%;
+    min-height: 50%;
+}
+.titulo {
+    font-size: large;
+    font-weight: bold;
+}
+.descripcion {
+    font-size: small;
+    color: #3e3e3e;
+}
+
+.toast-error {
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 3em;
+
+    border: 2px solid red;
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+}
+
+.toast-exito {
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 3em;
+
+    border: 2px solid green;
+    background-color: lightgreen;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+}
+
+.prev-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/car-side-left.png');
+    background-position: center;
+    height: 24px;
+    
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 24px;
+    background-size: 24px 24px;
+}
+
+.next-btn {
+    cursor: pointer;
+    background-image: url('http://autoescuelaprisas.com/autoescuela/interfaz/images/car-side-right.png');
+    background-position: center;
+    height: 24px;
+    
+    background-repeat: no-repeat;
+    background-color: inherit;
+    border: none;
+    padding-top: 24px;
+    background-size: 24px 24px;
+}
+
+th {
+    text-align: start;
+}
+
+tr td {
+    border-top: unset;
+    padding: 0.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+tr:nth-child(even) { 
+    background-color: rgba(103, 166, 179,0.2); 
+}
+
+.tablas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.grupoTablas {
+    width: 45%;
+}

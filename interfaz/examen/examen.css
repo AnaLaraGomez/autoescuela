@@ -1,0 +1,136 @@
+body {
+    padding: 1.75em;
+}
+
+#examen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navegador-examen {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navegador-examen ul {
+    display: flex;
+    padding: 0;
+}
+
+.navegador-examen ul li {
+    /*Quitar las bolicas de los li en los ul */
+    list-style-type: none;
+     /* Como no es de tipo button
+    se pierde el cursor en forma de mano 
+    asi que hay que ponerlo */
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border: 1px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegador-examen ul .seleccionado {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.navegador-examen ul .dudosa {
+    background-color: rgb(223, 129, 42) !important;
+}
+
+.navegador-examen ul .contestada {
+    background-color: rgb(103, 197, 36);
+}
+
+.pregunta {
+    margin: 1.25em;
+    display: none;
+}
+
+.pregunta-contenedor .seleccionado {
+    display: inherit;
+}
+
+.pregunta .titulo {
+    margin-top: 0.25em;
+}
+
+.identificador {
+    margin: 0;
+    font-size: small;
+    color: grey;
+}
+
+.respuestas {
+    margin-top: 1em;
+}
+
+.botones {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.botones .boton-primario {
+    width: 24em;
+
+}
+
+.usuarios-seleccionados {
+    max-height: 6em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style:none;
+}
+
+.usuarios-seleccionados .delete-btn {
+    padding-top: 0;
+    margin-left: 0.5em;
+    width: 2em;
+    background-size: 18px 18px;
+    background-position: bottom;
+}
+
+.multimedia img{
+    height: 10em;
+}
+
+.multimedia video{
+    height: 10em;
+}
+
+.grafica {
+    height: 1em;
+    width: 5em;
+    background-color: red;
+}
+.grafica .correcto {
+    background-color: greenyellow;
+    height: 100%;
+}
+
+.respuestas input {
+    margin: 1em;
+}
+
+.botones {
+    margin: 2em;
+    width: 100%;
+}
+
+#controles {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
